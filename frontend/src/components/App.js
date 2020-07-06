@@ -20,9 +20,25 @@ class App extends Component {
         });
     }
 
+  onChange(e) {
+    fetch('/api_country/country?search=' + e.target.value)
+    .then(response => response.json())
+    .then((data) => {
+        this.setState({countries: data});
+    })
+    .catch(err => {
+        alert('error');
+    });
+  }
+
   render() {
     return (
       <div>
+       <input
+        placeholder="Enter a country name"
+        onChange={(e) => this.onChange(e)}
+       />
+
         <table border="1">
             <tr>
                 <td> name </td>
