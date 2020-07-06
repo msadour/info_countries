@@ -23,14 +23,20 @@ class App extends Component {
   render() {
     return (
       <div>
-        <table>
+        <table border="1">
             <tr>
                 <td> name </td>
+                <td> population </td>
+                <td> capital </td>
+                <td> area </td>
             </tr>
 
             { this.state.countries.map(country => (
                 <tr>
                     <td> {country.name} </td>
+                    <td> {country.population} </td>
+                    <td> {country.capital} </td>
+                    <td> {country.area} </td>
                 </tr>
             ))}
         </table>
