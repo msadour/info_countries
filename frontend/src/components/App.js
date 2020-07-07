@@ -33,22 +33,24 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div >
+      <br /><br />
        <input
-        placeholder="Enter a country name"
+        style={{"border":"1px solid black", width: "30%", padding: "0.9%", "margin-left": "35%"}}
+        placeholder="Search a country.."
         onChange={(e) => this.onChange(e)}
        />
-
-        <table border="1">
-            <tr>
-                <td> name </td>
-                <td> population </td>
-                <td> capital </td>
-                <td> area </td>
+        <br /><br /><br />
+        <table border="0" cellspacing="0" style={{width: "70%", "margin": "0 auto"}}>
+            <tr style={{backgroundColor: "#ad9453", "text-align": "center", "line-height": "250%"}}>
+                <td style={{width: "10%"}}> <b>Name</b> </td>
+                <td style={{width: "10%"}}> <b>Population</b> </td>
+                <td style={{width: "10%"}}> <b>Capital</b> </td>
+                <td style={{width: "10%"}}> <b>Area</b> </td>
             </tr>
 
             { this.state.countries.map(country => (
-                <tr>
+                <tr style={{"line-height": "250%", "text-align": "center", backgroundColor: "#cbf5ee"}}>
                     <td> {country.name} </td>
                     <td> {country.population} </td>
                     <td> {country.capital} </td>
