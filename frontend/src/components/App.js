@@ -36,27 +36,30 @@ class App extends Component {
       <div >
       <br /><br />
        <input
-        style={{"border":"1px solid black", width: "30%", padding: "0.9%", "margin-left": "35%"}}
+        style={{"border":"1px solid black", width: "30%", padding: "0.9%", marginLeft: "35%"}}
         placeholder="Search a country.."
         onChange={(e) => this.onChange(e)}
        />
         <br /><br /><br />
-        <table border="0" cellspacing="0" style={{width: "70%", "margin": "0 auto"}}>
-            <tr style={{backgroundColor: "#ad9453", "text-align": "center", "line-height": "250%"}}>
-                <td style={{width: "10%"}}> <b>Name</b> </td>
-                <td style={{width: "10%"}}> <b>Population</b> </td>
-                <td style={{width: "10%"}}> <b>Capital</b> </td>
-                <td style={{width: "10%"}}> <b>Area</b> </td>
-            </tr>
-
-            { this.state.countries.map(country => (
-                <tr style={{"line-height": "250%", "text-align": "center", backgroundColor: "#cbf5ee"}}>
-                    <td> {country.name} </td>
-                    <td> {country.population} </td>
-                    <td> {country.capital} </td>
-                    <td> {country.area} </td>
+        <table border="0" cellSpacing="0" style={{width: "70%", "margin": "0 auto"}}>
+            <thead>
+                <tr style={{backgroundColor: "#ad9453", textAlign: "center", lineHeight: "250%"}}>
+                    <td style={{width: "10%"}}> <b>Name</b> </td>
+                    <td style={{width: "10%"}}> <b>Population</b> </td>
+                    <td style={{width: "10%"}}> <b>Capital</b> </td>
+                    <td style={{width: "10%"}}> <b>Area</b> </td>
                 </tr>
-            ))}
+            </thead>
+           <tbody>
+                { this.state.countries.map(country => (
+                    <tr key={country.id} style={{lineHeight: "250%", textAlign: "center", backgroundColor: "#cbf5ee"}}>
+                        <td> {country.name} </td>
+                        <td> {country.population} </td>
+                        <td> {country.capital} </td>
+                        <td> {country.area} </td>
+                    </tr>
+                ))}
+            </tbody>
         </table>
       </div>
     );
