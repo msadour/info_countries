@@ -1,6 +1,6 @@
-#Info countries
+# Info countries
 
-##Technologies used
+## Technologies used
 
 For this project, I needed the followed technologies :
 
@@ -9,7 +9,7 @@ For this project, I needed the followed technologies :
 * Django REST 3.11.0
 * React 16.13.1
 
-##How I implemented it
+## How I implemented it
     
 * Set up API REST to stores datas countries ;
 * Created the scrapper that take datas from **http://example.webscraping.com** ;
