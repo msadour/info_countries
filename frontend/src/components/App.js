@@ -9,16 +9,16 @@ class App extends Component {
     };
   }
 
-    componentDidMount(){
-        fetch('/api_country/country/')
-        .then(response => response.json())
-        .then((data) => {
-            this.setState({countries: data});
-        })
-        .catch(err => {
-            alert('error');
-        });
-    }
+  componentDidMount(){
+    fetch('/api_country/country/')
+    .then(response => response.json())
+    .then((data) => {
+        this.setState({countries: data});
+    })
+    .catch(err => {
+        alert('error');
+    });
+  }
 
   onChange(e) {
     fetch('/api_country/country?search=' + e.target.value)
@@ -33,7 +33,7 @@ class App extends Component {
 
   render() {
     return (
-      <div >
+      <div>
       <br /><br />
        <input
         style={{"border":"1px solid black", width: "30%", padding: "0.9%", marginLeft: "35%"}}
@@ -41,13 +41,13 @@ class App extends Component {
         onChange={(e) => this.onChange(e)}
        />
         <br /><br /><br />
-        <table border="0" cellSpacing="0" style={{width: "70%", "margin": "0 auto"}}>
+        <table border="0" cellSpacing="0" >
             <thead>
                 <tr style={{backgroundColor: "#ad9453", textAlign: "center", lineHeight: "250%"}}>
-                    <td style={{width: "10%"}}> <b>Name</b> </td>
-                    <td style={{width: "10%"}}> <b>Population</b> </td>
-                    <td style={{width: "10%"}}> <b>Capital</b> </td>
-                    <td style={{width: "10%"}}> <b>Area</b> </td>
+                    <td > <b>Name</b> </td>
+                    <td > <b>Population</b> </td>
+                    <td > <b>Capital</b> </td>
+                    <td > <b>Area</b> </td>
                 </tr>
             </thead>
            <tbody>
