@@ -27,7 +27,7 @@ class App extends Component {
         this.setState({countries: data});
     })
     .catch(err => {
-        alert('error');
+        alert('error'); //style={{"margin": "0 auto"}}
     });
   }
 
@@ -41,13 +41,13 @@ class App extends Component {
         onChange={(e) => this.onChange(e)}
        />
         <br /><br /><br />
-        <table border="0" cellSpacing="0" >
+        <table border="0" cellSpacing="0" style={{width: "70%", "margin": "0 auto"}}>
             <thead>
                 <tr style={{backgroundColor: "#ad9453", textAlign: "center", lineHeight: "250%"}}>
-                    <td > <b>Name</b> </td>
-                    <td > <b>Population</b> </td>
-                    <td > <b>Capital</b> </td>
-                    <td > <b>Area</b> </td>
+                    <td style={{width: "10%"}}> <b>Name</b> </td>
+                    <td style={{width: "10%"}}> <b>Population</b> </td>
+                    <td style={{width: "10%"}}> <b>Capital</b> </td>
+                    <td style={{width: "10%"}}> <b>Area</b> </td>
                 </tr>
             </thead>
            <tbody>
