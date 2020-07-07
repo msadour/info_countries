@@ -27,7 +27,7 @@ class App extends Component {
         this.setState({countries: data});
     })
     .catch(err => {
-        alert('error'); //style={{"margin": "0 auto"}}
+        alert('error');
     });
   }
 
